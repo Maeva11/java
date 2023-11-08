@@ -13,12 +13,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
 public class Controller implements Initializable {
 
@@ -35,38 +32,31 @@ public class Controller implements Initializable {
   private ChoiceBox<String> choixTaille = new ChoiceBox<String>(); 
   private final String[] taille = {"S", "M", "L"};
         
-  private String selectedImage = "@course.jpeg";
   @FXML
   private ImageView veloVille;
 
   @FXML
   private ImageView veloCourse;
-  
-  private StringProperty selectedImageProperty = new SimpleStringProperty("@course.jpeg");
-
-  public String getSelectedImage() {
-      return selectedImageProperty.get();
-  }
-
-  public void setSelectedImage(String selectedImage) {
-      this.selectedImageProperty.set(selectedImage);
-  }
 
   @FXML
   private void getDetails(MouseEvent event) throws IOException {
-      if (event.getSource() == veloVille) {
-          selectedImage = "@ville.jpeg";
-      } else if (event.getSource() == veloCourse) {
-          selectedImage = "@course.jpeg";
-      }
-
-      System.out.println(selectedImage);
-      Parent detail = FXMLLoader.load(getClass().getResource("/vues/vueDetail.fxml"));
+    ImageView imageViewClique = (ImageView) event.getSource();
+    String idClique = imageViewClique.getId();
+     Parent detail = FXMLLoader.load(getClass().getResource("/vues/vueDetail.fxml"));
       Scene scene2 = new Scene(detail);
       
       Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
       stage.setScene(scene2);
       stage.show();
+      
+      if ("veloVille".equals(idClique)) {
+        imageViewClique.getStyleClass().add("displayBike");
+        imageViewClique.getStyleClass().remove("hideBike");
+    } else {
+        imageViewClique.getStyleClass().remove("displayBike");
+        imageViewClique.getStyleClass().add("hideBike");
+    }
+      
   }
   
   public void back(MouseEvent event) throws IOException {
