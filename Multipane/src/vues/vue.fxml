@@ -50,15 +50,15 @@
         <Menu mnemonicParsing="false" text="File">
           <items>
             <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
+            <MenuItem mnemonicParsing="false" text="Openâ€¦" />
             <Menu mnemonicParsing="false" text="Open Recent" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Close" />
             <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Save Asâ€¦" />
             <MenuItem mnemonicParsing="false" text="Revert" />
             <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <MenuItem mnemonicParsing="false" text="Preferencesâ€¦" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Quit" />
           </items>
@@ -91,7 +91,7 @@
                   <Image url="@ville.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="89.0" layoutY="287.0" prefHeight="35.0" prefWidth="136.0" text="Vélo de ville">
+            <Label layoutX="89.0" layoutY="287.0" prefHeight="35.0" prefWidth="136.0" text="VÃ©lo de ville">
                <font>
                   <Font size="24.0" />
                </font>
@@ -101,7 +101,7 @@
                   <Image url="@course.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="396.0" layoutY="287.0" prefHeight="35.0" prefWidth="160.0" text="Vélo de course">
+            <Label layoutX="396.0" layoutY="287.0" prefHeight="35.0" prefWidth="160.0" text="VÃ©lo de course">
                <font>
                   <Font size="24.0" />
                </font>
