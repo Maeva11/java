@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <children>
+      <Label fx:id="labelBill" layoutX="88.0" layoutY="157.0" prefHeight="17.0" prefWidth="30.0" text="Bill">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bill" layoutX="61.0" layoutY="200.0" prefHeight="25.0" prefWidth="83.0" />
+      <Label fx:id="labelTips" layoutX="238.0" layoutY="157.0" prefHeight="30.0" prefWidth="43.0" text="Tips">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tips" layoutX="222.0" layoutY="200.0" prefHeight="25.0" prefWidth="74.0" />
+      <Label fx:id="labelPerson" layoutX="342.0" layoutY="157.0" prefHeight="30.0" prefWidth="208.0" text="Nombres de personnes">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="person" layoutX="372.0" layoutY="200.0" />
+      <Button layoutX="76.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#calculate" prefHeight="25.0" prefWidth="440.0" text="Calculate" textFill="RED" />
+      <Label layoutX="50.0" layoutY="303.0" prefHeight="30.0" prefWidth="130.0" text="Tip (par personne)" />
+      <Label layoutX="384.0" layoutY="303.0" prefHeight="30.0" prefWidth="137.0" text="Total (par personne)" />
+      <Label fx:id="labelError" layoutX="31.0" layoutY="47.0" prefHeight="48.0" prefWidth="538.0" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelTipTotal" layoutX="50.0" layoutY="339.0" prefHeight="30.0" prefWidth="137.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTotal" layoutX="378.0" layoutY="339.0" prefHeight="30.0" prefWidth="137.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBill1" layoutX="88.0" layoutY="118.0" prefHeight="30.0" prefWidth="51.0" text="Date">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="labelDate" layoutX="146.0" layoutY="121.0" onKeyReleased="#fillDataFields" prefHeight="25.0" prefWidth="161.0" promptText="dd/mm/yyyy" />
+   </children>
+</Pane>
